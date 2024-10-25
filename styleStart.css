@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url(./assets/TESTBK5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    width: 100%; 
+    max-width: 1000px; /* Allow container to stretch for larger logos */
+    padding: 20px; 
+}
+
+p{
+    font-size: 30px!important;
+    font-weight: bold;
+}
+
+.logo {
+    margin-bottom: 50px; 
+    width: 100%; 
+}
+
+.logo img {
+    width: 100%; /* Ensure the logo scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Limit the max width for the logo */
+}
+
+.brief {
+    opacity: 1; 
+    margin: 0 0 50px 0; 
+}
+
+.start-button {
+    padding: 15px 30px; 
+    font-size: 20px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.start-button:hover {
+    background-color: #45a049; 
+}
