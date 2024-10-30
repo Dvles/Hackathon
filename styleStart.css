@@ -1,61 +1,84 @@
+/* General body styling */
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    background-image: url(./assets/TESTBK5.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: black; /* Keeping background color the same */
 }
 
+
+
+/* Main container for the start page */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 90vw; /* 90% of the viewport width */
+    height: calc(90vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+    max-width: 1584px;
+    max-height: 891px;
+}
+
+/* Container styling for logo and text */
 .container {
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 100%; 
+    width: 100%;
     max-width: 1000px; /* Allow container to stretch for larger logos */
-    padding: 20px; 
+    padding: 20px;
 }
 
-p{
-    font-size: 30px!important;
+/* Paragraph styling */
+p {
+    font-size: 24px !important;
+    font-weight: 300;
+    color: white;
+}
+
+span {
     font-weight: bold;
+    color: #7ad27e;
 }
 
+/* Logo styling */
 .logo {
-    margin-bottom: 50px; 
-    width: 100%; 
+    margin-bottom: 50px;
+    width: 100%;
 }
 
 .logo img {
-    width: 100%; /* Ensure the logo scales with the container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 300px; /* Limit the max width for the logo */
+    width: 100%; 
+    height: auto; 
+    max-width: 300px; 
 }
 
+/* Brief text styling */
 .brief {
-    opacity: 1; 
-    margin: 0 0 50px 0; 
+    margin: 0 0 50px 0;
 }
 
+/* Start button styling */
 .start-button {
-    padding: 15px 30px; 
-    font-size: 20px; 
-    background-color: #4CAF50; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s; /* Transition effect */
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #7ad27e; 
+    color: rgb(17, 31, 22);
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
 }
 
 .start-button:hover {
-    background-color: #45a049; 
+    background-color: #60a263; 
+    transform: scale(1.05); 
 }

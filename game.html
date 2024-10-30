@@ -6,12 +6,37 @@
     <title>Tech or Trees</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./code.js" defer></script>
+    <!-- Pre-loading des images  -->
+    <script>
+        const preloadImages = [
+            './assets/bk-bad-final.png',
+            './assets/bk-good-2.png',
+            './assets/bk-good-1.png',
+            './assets/bk-good.png',
+            './assets/bk-neutral-good-2.png',
+            './assets/bk-neutral-good-1.png',
+            './assets/bk-neutral.png',
+            './assets/bk-neutral-bad-1.png',
+            './assets/bk-neutral-bad-2.png',
+            './assets/bk-bad.png',
+            './assets/bk-bad-1.png',
+            './assets/bk-bad-2.png',
+            './assets/bk-bad-final.png'
+        ];
+    
+        preloadImages.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    </script>
 </head>
 <body>
     <header>
     </header>
 
-    <main id="bkgdFrame" class="neutre game">
+    <div id="overlay"></div>
+
+    <main id="bkgdFrame" class="neutre game fullscreen">
         <div class="score">
             <span id="score-display"></span>
             <div id="section1">
@@ -36,7 +61,6 @@
                 <div class="bulle" id="8"><img src="./assets/neutral_rond_sm4.png"></div>
                 <div class="bulle" id="9"><img src="./assets/neutral_rond_sm4.png"></div>
                 <div class="bulle" id="10"><img src="./assets/neutral_rond_sm4.png"></div>
-                <div class="bulle" id="10"><img src="./assets/neutral_rond_sm4.png"></div>
             </div>
         </div>
 
@@ -49,10 +73,15 @@
 
         <div id="section3">
             <div id="explanation"></div><br>
-            <button id="next-btn" style="display:none;">Next Question</button>
-            <button id="final-score-btn">See your final score</button>
+            <button id="next-btn" style="display:none;">
+                <img src="./assets/next_arrow.svg" alt="Next">
+            </button>
+            <button id="final-score-btn">See impact</button>
             <div id="result" style="display:none;">
-                <h2>Your Final Score: <span id="final-score"></span></h2>
+                <p id="final-score" style="display:none;"></p> <!-- No longer needed -->
+                <h2 id="result-message"></h2>
+                <button id="restart-btn" style="display:none;">Restart</button>
+                <button id="end-btn" style="display:none;">End</button>
             </div>
         </div>
     </main>
